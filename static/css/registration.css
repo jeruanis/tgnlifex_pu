@@ -1,0 +1,317 @@
+@font-face{font-family:'Bellota-LightItalic';src:url(../fonts/Bellota-LightItalic.otf)}@font-face{font-family:'Bellota-BoldItalic';src:url(../fonts/Bellota-BoldItalic.otf)}html,body{height:100%;min-height:100%}form{text-align:center}body{margin:0;padding:0}
+.login_box{
+	position: relative;
+    top: 40%;
+    padding: 20px;
+    background: white;
+    min-width: 300px;
+    width: 351px;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -197px;
+}
+body{
+	height: 100%;
+	background: linear-gradient(45deg, #20bf6b, #0088cc, #ebf8e1 70%, #f89406, white);
+}
+#first input[type='text'] {
+	width: 90%;
+	border: none;
+	border-bottom: 1px solid #7f8c8d
+}
+a {
+	text-decoration: none;
+	color: #4286f4
+}
+#confirm {
+	display: none;
+	background: white;
+	color: green;
+	border: 1px solid #aaa;
+	position: fixed;
+	max-width: 290px;
+	height: 132px;
+	margin: 40% auto;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 10px;
+	position: relative;
+	margin-top: 200px
+}
+#confirm button {
+	background-color: #FFF;
+	display: inline-block;
+	border-radius: 12px;
+	border: 4px solid #aaa;
+	padding: 5px;
+	text-align: center;
+	width: 60px;
+	cursor: pointer
+}
+#confirm .message {
+	text-align: center
+}
+.message {
+	width: 100%
+}
+div#backgroundDiv {
+	height: 100%;
+	position: absolute;
+	background: linear-gradient(45deg, #20bf6b, #0088cc, #ebf8e1 70%, #f89406, white);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+input:focus {
+	outline: none
+}
+.wrapper {
+	height: 100%;
+	background: linear-gradient(45deg, #20bf6b, #0088cc, #ebf8e1 70%, #f89406, white)
+}
+.login_header {
+	font-family: 'Bellota-LightItalic', sans-serif;
+	color: #fff;
+	text-align: center;
+	border-radius: 7px;
+	margin: auto;
+	padding: 10px
+}
+.login_header h1 {
+	font-family: 'Bellota-BoldItalic';
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 25px
+}
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='text']:hover,
+input[type='password']:hover {
+	border-color: aqua
+}
+#second {
+	display: none
+}
+#screenResult input[type="text"] {
+	position: relative;
+	width: 707px;
+	height: 65px;
+	border: solid grey 2px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	font-size: 45px;
+	border: solid grey 2px;
+	left: 10px
+}
+#numberInputs input[type='button'] {
+	font-size: 35px;
+	margin: 5px 6.9px;
+	width: 100px
+}
+#numberInputs {
+	margin: 0 auto;
+	position: relative;
+	width: 709px
+}
+#mathContainer {
+	position: fixed;
+	width: 730px;
+	left: 320px;
+	padding: 10px;
+	top: 130px;
+	transition: all .4s ease
+}
+#first input[type='email'],
+#first input[type='password'],
+#first input[type='text'] {
+	width: 100%;
+	border: none;
+	border-radius:unset;
+	border-bottom: 1px solid #7f8c8d;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	padding-left: 28px
+}
+#second input[type='email'],
+#second input[type='password'],
+#second input[type='text'] {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #7f8c8d;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none
+}
+input[type='submit'] {
+	width: 100%;
+	border: none
+}
+footer nav ul li {
+	list-style: none;
+	display: inline
+}
+footer nav ul {
+	display: inline;
+	position: realtive;
+	top: 0px
+}
+footer nav .left-links {
+	float: left;
+	position: relative;
+	left: 50px;
+	top: -1px
+}
+footer nav .right-links {
+	float: right;
+	position: relative;
+	right: 50px;
+	top: -1px
+}
+footer nav .right-links li {
+	padding: 0 20px
+}
+footer nav ul li a:link {
+	text-decoration: none;
+	color: #333
+}
+footer nav ul li a:hover {
+	text-decoration: underline;
+	color: #483D8B;
+	text-shadow: 1px 1px darkblue
+}
+footer nav ul li a:visited {
+	text-decoration: underline;
+	color: #333
+}
+#footer-container {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	left: 1px;
+	z-index: 1;
+	bottom: 0;
+	transition: all 0.3s ease
+}
+.outside_note ul li {
+	list-style-type: none;
+	font-size: 17px;
+	position: relative;
+	left: -20px
+}
+.outside_note ul {
+	position: relative;
+	top: -10px;
+	border-radius: 10px
+}
+.outside_note {
+	position: relative;
+	top: 250px;
+	display: inline-block;
+	margin-right: 50px;
+	margin-left: 10px;
+	background: transparent;
+	border-radius: 10px
+}
+@media screen and (max-width: 860px) {
+	.outside_note {
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		position: relative;
+		top: 80%;
+		width: 60%;
+		text-align: center
+	}
+	#footer-container {
+		display: none
+	}
+}
+@media screen and (max-width: 400px) {
+	.outside_note {
+		position: relative;
+		top: 75%;
+		width: 60%;
+		background: none
+	}
+	.login_box {}footer {
+		display: none
+	}
+	#first input[type='text'] {}
+}
+@media screen and (max-width: 320px) {
+	.outside_note {
+		position: relative;
+		top: 70%;
+		width: 100%;
+		font-size: 10px;
+		background: none
+	}
+	.login_box {}footer {
+		display: none
+	}
+	#cannotEmpty {
+		display: none
+	}
+	#first input[type='text'] {}
+}
+.signin {}[data-tooltip]:after {
+	position: absolute;
+	left: 50%;
+	margin-left: -5px;
+	width: 0;
+	border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	content: " ";
+	font-size: 0;
+	line-height: 0
+}
+[data-tooltip]:active:before,
+[data-tooltip]:active:after {
+	visibility: visible;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1
+}
+[data-tooltip]:before {
+	width: 40%;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	margin-bottom: 20px;
+	margin-left: -50px;
+	padding: 10px;
+	width: 100px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	background: #4b6584;
+	color: #fff;
+	content: attr(data-tooltip);
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.2;
+	z-index: 5;
+	border: 1px solid cadetblue
+}
+[data-tooltip] {
+	position: relative;
+	z-index: 5;
+	cursor: pointer
+}
+[data-tooltip]:before,
+[data-tooltip]:after {
+	visibility: hidden;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+	opacity: 0;
+	pointer-events: none
+}
+
+.outer-sm{
+	height:50%;
+}
