@@ -31,7 +31,7 @@ if($query==''){
 
     $names = explode(" ", $query);
 
-      $usersReturnedQuery = mysqli_query($conn, "SELECT id, body FROM posts WHERE body LIKE '$query%' AND user_closed='no' LIMIT 8");
+      $usersReturnedQuery = mysqli_query($conn, "SELECT id, body, youtube, title_url, descript_url FROM posts WHERE (body LIKE '%$query%' OR youtube LIKE '%$query%' OR title_url LIKE '%$query%' OR descript_url LIKE '%$query%') AND user_closed='no' LIMIT 8");
 
           echo "<div class='card'><div class='card-body'>";
           echo "<div class='liveSearchWrap'>";
@@ -39,13 +39,18 @@ if($query==''){
                 while($row = mysqli_fetch_array($usersReturnedQuery)) {
                   $id = $row['id'];
                   $body = $row['body'];
+                  if(substr($body,0,1) == "<"){
+                    $body = substr(substr($body, 4), 0, 60);
+                  }else{
+                    $body = substr($body, 0, 60);
+                  }
                            echo "<div class='resultDisplayLiveSearch'>
                                  <a  href='../community/post?id=$id' style='color: #1485bd' >
-                                      <div class='liveSearchText'>
-                                       ".substr($body, 0, 100)."
+                                      <div class='liveSearchText mb-2'>
+                                       ".$body."...
                                       </div>
                                   </a>
-                                <div><br>";
+                                <div>";
                           }
                       }
 

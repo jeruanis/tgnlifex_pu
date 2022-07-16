@@ -32,7 +32,7 @@
     // do not remove youtuve if bodyYou is not empty
     if ($bodyYou != "none" || $bodyYou != "") {
         $bodyDiv = "<div class='postedBody' style='padding: 3px 18px 3px 18px;diplay: inline-block; display: inline-block; border-radius: 3px;margin-bottom:6px;overflow: auto;word-break:break-word;'>$body</div>";
-    }
+    } // this is removed from loading in the post but kept for single post
 
     if ($body != "" && ($bodyYou == "none" || $bodyYou == "") && $decriptUrl == "none") {
         $bodyDiv = "<div class='postedBody' style='padding: 3px 18px 3px 18px;diplay: inline-block; display: inline-block; border-radius: 3px;margin-bottom:6px;overflow: auto;word-break:break-word;'>$body</div>";
@@ -91,7 +91,7 @@
            $delOption
 
           <div id='post_bodyi'>
-          <div>$bodyYouDiv $bodyDiv $urlExtract $imageDiv $videoDiv</div>
+          <div> $bodyDiv $urlExtract $imageDiv $videoDiv</div>
                 </div>
                 <div id='postBot' style='display: flex;height:50px;width:100%'>
                     <div class='pl-3 newsfeedPostOption comment$id' style='display: -webkit-inline-box;-moz-inline-box'>
