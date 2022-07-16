@@ -15,19 +15,30 @@ include("includes/classes/Notification.php");
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <meta name="description" content="Online radio station FM 2021 with social media and tools">
- <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
- <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+ <?php if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on'){ ?>
+     <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
 
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
- <link rel="icon" type="image/jpg" href="../assets/images/background/favicon.jpg">
- <link rel="stylesheet" type="text/css" href="static/css/style1.css">
- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js" defer></script>
- <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js" defer></script>
- <script src="static/js/javascript_non_myapps.js" defer></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+     <link rel="icon" type="image/jpg" href="../assets/images/background/favicon.jpg">
+     <link rel="stylesheet" type="text/css" href="static/css/style1.css">
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js" defer></script>
+     <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js" defer></script>
+     <script src="static/js/javascript_non_myapps.js" defer></script>
+ <?php }else{ ?>
+    <link rel="icon" type="image/jpg" href="../assets/images/background/favicon.jpg">
+    <link rel="stylesheet" type="text/css" href="static/css/style1.css">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/semantic_ui_241_min.css">
+    <script src="static/js/code.jquery.3.5.1.min.js"></script>
+    <!-- <script src="static/js/bootstrap.min.js"></script> -->
+    <script src="static/js/javascript_non_myapps.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+<?php } ?>
  <style media="screen">
  button{
    border: none;

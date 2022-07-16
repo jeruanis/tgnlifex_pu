@@ -753,6 +753,7 @@ class Post{
         $items = ["\\r\\n", "\\r", "\\n"];
         foreach ($items as $item)  {
             $body = str_replace($item, "<br>", $body);
+            $body =substr($body, 4);
         }
 
         $sql = "INSERT INTO posts(id, body, added_by, user_to, date_added, user_closed, deleted, likes, aid, gname, status, image, youtube, posting, video, title_url, image_url, descript_url, body_cleared, vidpost) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

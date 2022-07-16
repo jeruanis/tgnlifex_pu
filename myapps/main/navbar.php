@@ -136,7 +136,16 @@
                   </form>
                   <div class="search_results gp_searchResult" style="z-index:3;"></div>
                 </li>
-             <?php } ?>
+             <?php }else { ?>
+               <li>
+                 <form action="../utilities/search_content" method="GET" name="search_form" class="form-inline my-2 my-lg-0 form-control" >
+                    <span class="se-ico"></span>
+                    <input class="no-outline border-0 mr-sm-2" type="text" onkeyup="getLiveSearchContent(this.value)" name="q" placeholder="Search " id="search_text_input">
+                    <input type="hidden">
+                  </form>
+                  <div class="search_results gp_searchResult" style="z-index:3;"></div>
+                </li>
+            <?php } ?>
 
 
          <!-- for gallery -->

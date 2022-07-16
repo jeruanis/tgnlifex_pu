@@ -1,4 +1,16 @@
 <?php
+//turn off error reporting
+define('DEBUG', false);
+error_reporting(E_ALL);
+  if (DEBUG)
+  {
+    ini_set('display_errors', 'On');
+  }
+  else
+  {
+    ini_set('display_errors', 'Off');
+  }
+
    include('../main/base.php');
 ?>
    <style>

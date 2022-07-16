@@ -183,6 +183,21 @@ function getLiveSearchUsers(value, user) {
     })
 }
 
+function getLiveSearchContent(value) {
+    $.post("../../includes/handlers/ajax_search_content.php", {
+        query: value
+    }, function(data) {
+        if ($(".search_results_footer_empty")[0]) {}
+        $(".search_results").html(data);
+        $(".search_results_footer").html("<a href='search_content.php?q=" + value + "'><p style='color: #fff;'><br>See Friend Resuls</p></a>");
+        if (data == "") {
+            $(".search_results_footer").html("")
+        }
+        $(".search_results").html(data);
+        $(".search_results_footer").html("<a href='search_content.php?q=" + value + "'><p>See All Results</p></a>")
+    })
+}
+
 function getLiveSearchUsersGroup(value, user, group) {
     $.post("../../includes/handlers/ajax_searchGroup.php", {
         query: value,
@@ -278,5 +293,3 @@ const sendIcon_group = (url, user_to, userloggedin, group_to, gif, mode, lastMes
       }
     });
    }
-
-   
