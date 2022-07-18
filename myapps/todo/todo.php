@@ -14,18 +14,20 @@
 
 <script src="../../static/js/todojs.js"></script>
 <body>
-  <div id="cancel_drag" class="d-none text-center pt-2 pb-2">
+  <section id="cancel_drag" class="d-none text-center pt-2 pb-2">
     Drag out to cancel
-  </div>
-  <div class="container">
-    <div id="todoListWrapper">
+  </section>
+  <main class="container">
+    <section id="todoListWrapper">
      <div class="d-inline-block" style="margin-left:50%"><a href="#" class="back-to-top"></a></div>
+     <header>
    		<center>
         <h2>Schedule Your Week</h2>
    			<h3 class="m-0 mb-2">Tap on the days of your choice</h3>
       </center>
+     </header>
+      <article id="todoList">
    			<form method="POST" action="" enctype="multipart/form-data" id="todoForm">
-   				<div id="todoList">
    					<ul>
    						<li class="listTitle">Monday</li>
    						<li class="addItem">
@@ -82,12 +84,12 @@
    						</li>
    						<?php echo url($forPlanning); ?>
    					</ul>
-   				</div>
-   			</form>
+   			   </form>
+        </article>
    			<!-- <div id="trash" style="position:fixed;top:8%;right:0;"><span style="font-size:24px;font-weight:bold;">&#128465;</span></div> -->
         <div id="trash" style="position:fixed;width:100%;top:8%;right:0;height:100px;"><span style="font-size: 30px;float:right;padding-right:5px;">&#128465;</span></div>
-   		</div>
-  </div>
+   		</section>
+  </main>
 
   <script>
        var username ='<?php echo $userloggedin; ?>';

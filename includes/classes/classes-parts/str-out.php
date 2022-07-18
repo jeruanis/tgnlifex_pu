@@ -55,20 +55,26 @@
     }
 
    if(strpos($_SERVER['REQUEST_URI'], "ajax_load_profile_posts.php")) {
-     $url_link = "...<a class='text-success font-weight-bold text-decoration-none' href='../community/post?id=$id'>               Read more >> </a>";
+     $url_link = "...<a class='text-success font-weight-bold text-decoration-none' target='_blank' href='../community/post?id=$id'>               Read more >> </a>";
    }else{
-     $url_link = "...<a class='text-success font-weight-bold text-decoration-none' href='post?id=$id'>               Read more >> </a>";
+     $url_link = "...<a class='text-success font-weight-bold text-decoration-none' target='_blank' href='post?id=$id'>               Read more >> </a>";
    }
 
     $strLenght = strlen($bodyDiv);
     if ($strLenght > 900){
-        $bodyDiv = substr($bodyDiv, 0, 800) . $url_link;
+        $bodyDiv = substr($bodyDiv, 0, 400) . $url_link;
+    }else{
+      if ($bodyYou)
+        $bodyDiv = substr($bodyDiv, 0, 400) .'<div class="pl-3 ml-2">'. str_replace('Read more', 'Watch video', substr($url_link, 3)).'</div>';
     }
+
+
 
     $delOption = "<div style='float:right;display:inline-block;padding:0 18px'>
         <div class='newsfeedPostOption option$id' style='float:right;padding:0 18px;'>$option</div>
         <div class='post_option' id='toggleOption$id' style='display:none;padding-top:18px;'>
             <div id='option_section' class='opsec$id border p-2'>
+                $edit_button
                 $delete_button
                 $hide_inTimeline
                 $show_inTimeline
@@ -98,14 +104,14 @@
                         <table border='0'>
                             <tr>
                               <td>
-                                <div class='ui labeled button' tabindex='0'>
-                                  <div class='ui button'>
-                                    <i class='comment icon'></i> Comment
-                                  </div>
-                                  <a class='ui basic label'>
+
+
+                                    <i class='fa fa-comments' style='font-size:20px;color:#F7D716;'></i>
+
+
                                     $comments_check_num
-                                  </a>
-                                 </div>
+
+
                               </td>
                               <td>
                                 <iframe class='likeId' src='../likes/like.php?post_id=$id' scrolling='no' style='height: 37px;width:200px;border:none;margin-top:.3rem'>

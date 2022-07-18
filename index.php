@@ -14,7 +14,7 @@ include("includes/classes/Notification.php");
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="Online radio station FM 2021 with social media and tools">
+ <meta name="description" content="Online Web partner">
  <?php if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on'){ ?>
      <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -80,6 +80,7 @@ include("includes/classes/Notification.php");
  }else{
    $userloggedin='';
    if (!isset($_SESSION['username'])){ ?>
+    <header>
      <nav class="navbar navbar-expand-lg navbar-light bg-class py-3" style="justify-content:space-between!important">
           <div class="reg-in text-decoration-none"> <a href="myapps/userlogin/registration_signup_page">Welcome Guest!</a> </div>
            <div class="reg-in text-decoration-none"> <a href="myapps/userlogin/registration_signup_page">Register | Login</a> </div>
@@ -106,14 +107,16 @@ include("includes/classes/Notification.php");
            }
         ?>
      </nav>
-
-     <div class="dropdown_data_window" style="height:0px"></div>
-     <input type="hidden" id="dropdown_data_type" value="">
+     <section>
+       <div class="dropdown_data_window" style="height:0px"></div>
+       <input type="hidden" id="dropdown_data_type" value="">
+     </section>
+  </header>
    <?php }
 }
    ?>
 
-<div class="container pt-1 pb-3 mt-5 footer-height">
+<main class="container pt-1 pb-3 mt-5 footer-height">
       <a class="text-decoration-none" href="index_home">
       <div class="cov" style="background:#A3423C">
         <h6 class="con">ONLINE RADIO </h6>
@@ -235,7 +238,7 @@ include("includes/classes/Notification.php");
      </a> -->
    <?php  } ?>
 
-</div>
+</main>
 
   <?php include('footer_index.php'); ?>
 </body>

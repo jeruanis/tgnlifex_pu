@@ -48,7 +48,7 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Online radio station FM 2021 with social media and tools">
+	<meta name="description" content="Online Web partner">
 	<!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"> </script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"> </script><![endif]-->
 	<link rel="icon" type="image/jpg" href="../../../assets/images/background/favicon.jpg">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">'; echo '
@@ -112,7 +112,8 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
 		<link rel="stylesheet" type="text/css" href="../../static/css/todo.css">
 
 		<link rel="stylesheet" href="../../static/css/semantic_ui_241_min.css">
-		<link rel="stylesheet" href="../../static/css/font_awesome_611.min.css">
+		<!-- <link rel="stylesheet" href="../../static/css/font_awesome_611.min.css"> -->
+		<link href="../../static/css/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../gallery/fancybox-master/src/css/slideshow.css">
 		<link rel="stylesheet" href="../../static/css/bootstrap.css">
 		<link rel="stylesheet" href="../../static/css/semantic_ui_241_min.css">

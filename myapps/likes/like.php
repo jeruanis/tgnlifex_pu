@@ -1,5 +1,16 @@
 <?php
-
+//turn off error reporting
+define('DEBUG', false);
+error_reporting(E_ALL);
+  if (DEBUG)
+  {
+    ini_set('display_errors', 'On');
+  }
+  else
+  {
+    ini_set('display_errors', 'Off');
+  }
+   
     require('../main/base.php');
 
     if(isset( $_SESSION['username'])) {
@@ -25,7 +36,7 @@
     $row=mysqli_fetch_array($get_likes);
     $total_likes=$row['likes'];
     $user_liked = $row['added_by'];
-    $user_details_query=mysqli_query($conn, "SELECT*FROM users WHERE username='$user_liked'");
+    $user_details_query=mysqli_query($conn, "SELECT * FROM users WHERE username='$user_liked'");
     $row=mysqli_fetch_array($user_details_query);
     $total_user_likes = $row['num_likes'];
 
@@ -57,33 +68,32 @@
     mysqli_close($conn);
 
     if($num_rows >= 1) {
-      echo '<form action="like.php?post_id=' .$post_id.'" method="POST">
+      echo '<form action="like.php?post_id=' .$post_id.'" method="POST" style="margin-top:3%">
           <div class="like_value">
             <button type="submit" class="comment_like" name="unlike_button" style="border:none;outline:none;background:white;">
-              <div class="ui labeled button" tabindex="0">
-                <div class="ui button">
-                  <i class="heart icon text-info"></i> Like
-                </div>
-                <a class="ui basic label">
+
+                  <i class="fa fa-heart" style="font-size:16px;color:pink;"></i>
+
+
                   '.$total_likes.'
-                </a>
-              </div>
+
+
             </button>
           </div>
           </form>';
 
     }else{
-      echo '<form action="like.php?post_id=' .$post_id.'" method="POST">
+      echo '<form action="like.php?post_id=' .$post_id.'" method="POST" style="margin-top:3%">
         <div class="like_value">
         <button type="submit" class="comment_like" name="like_button" style="border:none;outline:none;background:white;">
-        <div class="ui labeled button" tabindex="0">
-          <div class="ui button">
-            <i class="heart icon"></i> Like
-          </div>
-          <a class="ui basic label">
+
+
+            <i class="fa fa-heart" style="font-size:16px;color:#A5BECC;"></i>
+
+
             '.$total_likes.'
-          </a>
-        </div>
+
+
         </button></div>
         </form>';
         }
