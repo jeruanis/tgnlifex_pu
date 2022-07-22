@@ -204,6 +204,8 @@ class Post{
                 $show_inTimeline = $hide_inTimeline = $delete_button = "";
                 if ($userloggedin == $added_by || $userloggedin == 'support-service') {
                     $delete_button = "<button class='delete_button d-block m-0 bg-white text-secondary' id='post$id'>Delete post</button>";
+                    $edit_button = "<button class='delete_button d-block m-0 bg-white text-secondary' id='edit_post$id'>Edit post</button>";
+
                     if ($posted == 'yes') {
                         $hide_inTimeline = "<button class='delete_button d-block m-0 bg-white text-secondary' id='posthide$id'>Show in profile page only</button>";
                         $show_inTimeline = "";
@@ -214,7 +216,7 @@ class Post{
 
                 } else {
 
-                    $delete_button = $hide_inTimeline = $show_inTimeline = $option = "";
+                    $delete_button = $hide_inTimeline = $show_inTimeline = $option = $edit_button ="";
                 }
 
 
@@ -373,6 +375,7 @@ class Post{
                 $show_inTimeline=$hide_inTimeline=$delete_button="";
                 if ($userloggedin==$added_by) {
                    $delete_button = "<button class='delete_button d-block m-0 bg-white text-secondary' id='post$id'>Delete post</button>";
+                   $edit_button = "<button class='delete_button d-block m-0 bg-white text-secondary' id='edit_post$id'>Edit post</button>";
                     if ($posted == 'yes') {
                         $hide_inTimeline = "<button class='delete_button d-block m-0 bg-white text-secondary' id='posthide$id'>Show in profile page only</button>";
                         $show_inTimeline = "";
@@ -565,8 +568,9 @@ class Post{
             $posted = $row['posting'];
 
             $show_inTimeline=$hide_inTimeline=$delete_button="";
-            if ($userloggedin==$added_by) {
+            if ($userloggedin==$added_by || $userloggedin=='support-service') {
               $delete_button = "<button class='delete_button d-block m-0 bg-white text-secondary' id='post$id'>Delete post</button>";
+              $edit_button = "<button class='delete_button d-block m-0 bg-white text-secondary' id='edit_post$id'>Edit post</button>";
               if ($posted == 'yes') {
                     $hide_inTimeline = "<button class='delete_button d-block m-0 bg-white text-secondary' id='posthide$id'>Show in profile page only</button>";
                     $show_inTimeline = "";
@@ -602,7 +606,13 @@ class Post{
               $gname = str_replace("'", "&#39", $gname);
           }
 
-          $images_query = mysqli_query($this->conn, "SELECT * FROM posts WHERE aid='$aid' AND added_by='$added_by' AND status='process'");
+          $stmt = mysqli_stmt_init($this->conn);
+          // $images_query = mysqli_query($this->conn, "SELECT * FROM posts WHERE aid='$aid' AND added_by='$added_by' AND status='process'");
+          $images_query = "SELECT * FROM posts WHERE aid=? AND added_by=? AND status=?";
+          mysqli_stmt_prepare($stmt, $images_query);
+          mysqli_stmt_bind_param($stmt, 'iss', $aid, $added_by, $process);
+          mysqli_stmt_execute($stmt);
+          $result3 = mysqli_stmt_get_result($stmt);
           $imageDiv = "";
 
          include("classes-parts/post-mul-image.php");
@@ -753,6 +763,7 @@ class Post{
         $items = ["\\r\\n", "\\r", "\\n"];
         foreach ($items as $item)  {
             $body = str_replace($item, "<br>", $body);
+            // $body =substr($body, 4);
         }
 
         $sql = "INSERT INTO posts(id, body, added_by, user_to, date_added, user_closed, deleted, likes, aid, gname, status, image, youtube, posting, video, title_url, image_url, descript_url, body_cleared, vidpost) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

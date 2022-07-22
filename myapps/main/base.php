@@ -48,7 +48,7 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Online radio station FM 2021 with social media and tools">
+	<meta name="description" content="Online Web partner">
 	<!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"> </script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"> </script><![endif]-->
 	<link rel="icon" type="image/jpg" href="../../../assets/images/background/favicon.jpg">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">'; echo '
@@ -71,38 +71,66 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
 	<meta name="description" content="TgnLife your life.">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-	<link rel="icon" type="image/jpg" href="../../../assets/images/background/favicon.jpg">
-	<link rel="stylesheet" href="../../static/css/jquery.Jcrop.css" type="text/css" />
-	<link rel="stylesheet" href="../../static/css/normalize_v8.css" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="../gallery/fancybox-master/src/css/slideshow.css">
-	<link rel="stylesheet" type="text/css" href="../../static/css/style1.css">
-	<link rel="stylesheet" type="text/css" href="../../static/css/todo.css">
+	<?php if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on'){ ?>
+		<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+		<link rel="icon" type="image/jpg" href="../../../assets/images/background/favicon.jpg">
+		<link rel="stylesheet" href="../../static/css/jquery.Jcrop.css" type="text/css" />
+		<link rel="stylesheet" href="../../static/css/normalize_v8.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../gallery/fancybox-master/src/css/slideshow.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/style1.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/todo.css">
 
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
-	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+		<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
+	  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	  <script src="../../static/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+		<script src="../../static/js/jquery.ui.touch-punch.js"></script>
+		<!-- footer -->
+		<script src="../../static/js/jquery.Jcrop.js"></script>
+		<script src="../../static/js/jcrop_bits.js"></script>
+		<script src="../../static/js/jquery.visible.min.js"></script>
+		<!-- navbar -->
+		<script src="../../static/js/bootbox.min.js"></script>
+		<script src="../../static/js/javascript.js"></script>
+		<script src="../../static/js/query.form.js"></script>
 
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<?php }else{ ?>
+		<link rel="icon" type="image/jpg" href="../../../assets/images/background/favicon.jpg">
+		<link rel="stylesheet" href="../../static/css/jquery.Jcrop.css" type="text/css" />
+		<link rel="stylesheet" href="../../static/css/normalize_v8.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../gallery/fancybox-master/src/css/slideshow.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/style1.css">
+		<link rel="stylesheet" type="text/css" href="../../static/css/todo.css">
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="../../static/js/jquery-ui-1.12.1/jquery-ui.js"></script>
-	<script src="../../static/js/jquery.ui.touch-punch.js"></script>
-	<!-- footer -->
-	<script src="../../static/js/jquery.Jcrop.js"></script>
-	<script src="../../static/js/jcrop_bits.js"></script>
-	<script src="../../static/js/jquery.visible.min.js"></script>
-	<!-- navbar -->
-	<script src="../../static/js/bootbox.min.js"></script>
-	<script src="../../static/js/javascript.js"></script>
-	<script src="../../static/js/query.form.js"></script>
+		<link rel="stylesheet" href="../../static/css/semantic_ui_241_min.css">
+		<!-- <link rel="stylesheet" href="../../static/css/font_awesome_611.min.css"> -->
+		<link href="../../static/css/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../gallery/fancybox-master/src/css/slideshow.css">
+		<link rel="stylesheet" href="../../static/css/bootstrap.css">
+		<link rel="stylesheet" href="../../static/css/semantic_ui_241_min.css">
 
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="../../static/js/code.jquery.3.5.1.min.js"></script>
+		<script src="../../static/js/jquery-ui-1.12.1/jquery-ui.js"></script>
+		<script src="../../static/js/jquery.ui.touch-punch.js"></script>
+		<!-- footer -->
+		<script src="../../static/js/jquery.Jcrop.js"></script>
+		<script src="../../static/js/jcrop_bits.js"></script>
+		<script src="../../static/js/jquery.visible.min.js"></script>
+		<!-- navbar -->
+		<script src="../../static/js/bootbox.min.js"></script>
+		<script src="../../static/js/javascript.js"></script>
+		<script src="../../static/js/query.form.js"></script>
+		<script src="../gallery/fancybox-master/src/js/core.min.js"></script>
+		<script src="../../static/js/bootstrap.bundle.min.js"></script>
+	<?php } ?>
 
 </head>

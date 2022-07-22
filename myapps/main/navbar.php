@@ -10,11 +10,12 @@
 
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-info py-3">
+  <section>
 		<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z"/></svg>
-     </button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-
+    </button>
+  </section>
+		<section class="navbar-collapse" id="navbarNav">
        <ul class="navbar-nav">
        <?php if ($curPageName != 'index.php' ) {  ?>
 				<li class="nav-item">
@@ -129,14 +130,24 @@
            <?php
              if($curPageName == 'profile.php') { ?>
                <li>
-                 <form action="../utilities/search" method="GET" name="search_form" class="form-inline my-2 my-lg-0 form-control" >
+                 <form action="../utilities/search" method="GET" name="search_form" class="form-inline my-2 my-lg-0 form-control" autocomplete="off">
                     <span class="se-ico"></span>
                     <input class="no-outline border-0 mr-sm-2" type="text" onkeyup="getLiveSearchUsers(this.value,'<?php echo $userloggedin; ?>')" name="q" placeholder="Search username" id="search_text_input">
                     <input type="hidden">
                   </form>
                   <div class="search_results gp_searchResult" style="z-index:3;"></div>
                 </li>
-             <?php } ?>
+             <?php }
+             if($curPageName == 'community.php') { ?>
+               <li>
+                 <form action="../utilities/search_content" method="GET" name="search_form" class="form-inline my-2 my-lg-0 form-control" autocomplete="off">
+                    <span class="se-ico"></span>
+                    <input class="no-outline border-0 mr-sm-2" type="text" onkeyup="getLiveSearchContent(this.value)" name="q" placeholder="Search " id="search_text_input">
+                    <input type="hidden">
+                  </form>
+                  <div class="search_results gp_searchResult" style="z-index:3;max-width: 400px; overflow-x: scroll;"></div>
+                </li>
+            <?php } ?>
 
 
          <!-- for gallery -->
@@ -213,7 +224,7 @@
 
           if (isset($_SESSION['username'])){
              $userloggedin = $_SESSION['username'];
-             echo '</div><div class="logout-out" style="position:absolute;top:21px;">';
+             echo '</section><div class="logout-out" style="position:absolute;top:21px;">';
              echo '<a class="ui image label" href="../profile/' . $userloggedin . '">
                       <img src="../../../' . $profile_pic. '" alt="profile image">
                       '.$userloggedin.'
@@ -222,13 +233,15 @@
                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="red"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
              </a> </div>';
           }else{
-             echo '</div><div class="reg-out text-decoration-none"> <a href="myapps/userlogin/registration_signup_page">Welcome Guest! Register | Login</a> </div>';
+             echo '</section><div class="reg-out text-decoration-none"> <a href="myapps/userlogin/registration_signup_page">Welcome Guest! Register | Login</a> </div>';
           }
 				 ?>
 
 	</nav>
-	<div class="dropdown_data_window" style="height:0px"></div>
-	<input type="hidden" id="dropdown_data_type" value="">
-	<!-- <div class="search_results gp_searchResult" style="z-index:3;"></div> -->
+  <section>
+  	<div class="dropdown_data_window" style="height:0px"></div>
+  	<input type="hidden" id="dropdown_data_type" value="">
+  	<!-- <div class="search_results gp_searchResult" style="z-index:3;"></div> -->
+  </section>
 
-   <div class="container px-0">
+  <div class="container px-0">

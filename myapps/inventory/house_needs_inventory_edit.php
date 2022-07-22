@@ -3,16 +3,16 @@
 include('../main/base.php');
 include('house_needs_inventory_edit_top.php');?>
 
-<style>.col-column, body{/*overflow:hidden;*/}body{/* overflow:hidden;*/}table{width:100%; background:#219bc3;}table th, table td{width:50%;}td>.form-control{background:lightpink; font-size:18px; text-transform: capitalize;}th>.form-control{font-weight:bold; font-size:18px; text-transform: capitalize;}.cover{background: linear-gradient(45deg, #20bf6b, #0088cc, #ebf8e1 70%, #f89406, white);}body, .col-column-inventory{/*overflow:hidden;*/ overflow-anchor:none;}.bg-light{background-color:#219bc3!important;}#logo{color:yellow;}@media(max-width:600px){.col-sm-12, .col-md-12{padding:0;}html{overflow-x:hidden;}}
+<style>.col-column, body{ overflow-y:scroll; overflow-x;hidden;}table{width:100%; background:#219bc3;}table th, table td{width:50%;}td>.form-control{background:lightpink; font-size:18px; text-transform: capitalize;}th>.form-control{font-weight:bold; font-size:18px; text-transform: capitalize;}.cover{background: linear-gradient(45deg, #20bf6b, #0088cc, #ebf8e1 70%, #f89406, white);}body, .col-column-inventory{/*overflow:hidden;*/ overflow-anchor:none;}.bg-light{background-color:#219bc3!important;}#logo{color:yellow;}@media(max-width:600px){.col-sm-12, .col-md-12{padding:0;}html{overflow-x:hidden;}}
 
 </style>
 </head>
 <?php include( '../main/navbar.php'); ?>
-<div class="container">
-  <div class="col-column-inventory">
-		<div id="mid-edit">
+<!-- <main class=""> -->
+  <main class="col-column-inventory">
+		<section id="mid-edit">
 			<form action="" method="post">
-				<div class="row">
+				<header class="row">
 					<div class="col-sm-12 col-md-12">
 						<div style="padding:21px">
 							<p style="display:inline-block"><a class="btn btn-sm btn-primary" href="house_needs_inventory?inventory=<?php echo $inventory_name; ?>">Back</a>
@@ -21,7 +21,7 @@ include('house_needs_inventory_edit_top.php');?>
 							<p style="font-size:15px;color:#555;">Maximum of 21 Letters including space on each input</p>
 						</div>
 					</div>
-				</div>
+				</header>
 				<table border="0" cellpadding="3" cellspacing="0">
 					<tr>
 						<th class="text-center text-white">Item Name</th>
@@ -333,9 +333,9 @@ include('house_needs_inventory_edit_top.php');?>
 					</tr>
 				</table>
 			</form>
-		</div>
-</div>
-</div>
+		</section>
+</main>
+<!-- </main> -->
 <p>&nbsp;</p>
 </body>
 

@@ -24,13 +24,13 @@ function orientation_flag($orientation){
 
 function load_image($fileName, $type) {
   if( $type == IMAGETYPE_JPEG ) {
-  $image = imagecreatefromjpeg($fileName);
+  $image = @imagecreatefromjpeg($fileName);
   }
   elseif( $type == IMAGETYPE_PNG ) {
-  $image = imagecreatefrompng($fileName);
+  $image = @imagecreatefrompng($fileName);
   }
   elseif( $type == IMAGETYPE_GIF ) {
-  $image = imagecreatefromgif($fileName);
+  $image = @imagecreatefromgif($fileName);
   }
   return $image;
  }

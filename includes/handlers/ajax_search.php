@@ -25,8 +25,9 @@ else {
      $usersReturnedQuery = mysqli_query($conn, "SELECT username, first_name, last_name, profile_pic FROM users WHERE (username LIKE '$names[0]%' OR username LIKE '$names[0]%') AND user_closed='no' LIMIT 8");
  }
 
+     echo "<section class='card'><div class='card-body'>";
+     echo "<div class='liveSearchWrap'>";
         if ($query != " ") {
-          echo "<div class='col-md-12' style='margin: 0 auto 10px;padding: 60px 20px;background: white;'>";
             while ($row = mysqli_fetch_array($usersReturnedQuery)) {
                 $user = new User($conn, $userloggedin);
                 $profile_pic = $row['profile_pic'];
@@ -37,7 +38,10 @@ else {
                 } else {
                     $mutual_friends = "";
                 }
-                if ($user_name != $userloggedin) {
+
+                if($user_name == 'support-service'){
+                  echo " ";
+                }elseif ($user_name != $userloggedin) {
                     echo "
                        <a href='../profile/".$user_name."' style='color: #1485bd' >
                           <div class='liveSearchText'>
@@ -54,11 +58,14 @@ else {
                            </table>
                           </div>
                         </a>";
-                 }
+                  }else{
+                    echo " ";
+                  }
           }
-          echo "<div>";
+
         } else {
           echo " ";
           }
-
+      echo "</div>";
+      echo '</div></section>';
 ?>

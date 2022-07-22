@@ -59,6 +59,7 @@
        <div class='newsfeedPostOption option$id' style='float:right;padding:0 18px;'>$option</div>
        <div class='post_option' id='toggleOption$id' style='display:none;padding-top:18px;'>
            <div id='option_section' class='opsec$id border p-2'>
+               $edit_button
                $delete_button
                $hide_inTimeline
                $show_inTimeline
@@ -88,14 +89,12 @@
                        <table border='0'>
                            <tr>
                              <td>
-                               <div class='ui labeled button' tabindex='0'>
-                                  <div class='ui button'>
-                                    <i class='comment icon'></i> Comment
-                                  </div>
-                                  <a class='ui basic label'>
-                                    $comments_check_num
-                                  </a>
-                                </div>
+
+                             <i class='fa fa-comments' style='font-size:20px;color:#F7D716;'></i>
+
+
+                             $comments_check_num
+
                              </td>
                              <td>
                                <iframe class='likeId' src='../likes/like.php?post_id=$id' scrolling='no' style='height: 37px;width:200px;border:none;margin-top:.3rem'>

@@ -42,7 +42,7 @@
 
         $imageDiv .= "<div stle='width:810px;height:410px;border:1px solid green;position:relative'><div style=' width: 100%; padding-bottom: 6px; margin: 0 auto;'><center>";
 
-        if (mysqli_num_rows($result3 > 0) {
+        if (mysqli_num_rows($result3) > 0){
             $counter = 0;
             while ($row = mysqli_fetch_assoc($result3)) {
                 $images = $row['image'];

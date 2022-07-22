@@ -46,7 +46,7 @@ function load_image($fileName, $type) {
   }
 
   elseif( $type == IMAGETYPE_PNG ) {
-
+  
   $image = imagecreatefrompng($fileName);
 
   }

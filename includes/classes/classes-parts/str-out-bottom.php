@@ -1,6 +1,11 @@
  <script>
 
     $(document).ready(function() {
+
+        $('#edit_post<?php echo $id; ?>').on('click', function() {
+            window.location.href="../../myapps/community/edit_post.php?post_id=<?php echo $id; ?>&aid=<?php echo $aid; ?>";
+        });
+
         $('#post<?php echo $id; ?>').on('click', function() {
             $.post("../../includes/form_handlers/delete_post.php?post_id=<?php echo $id; ?>&aid=<?php echo $aid; ?>");
             $(".<?php echo $id ?>").hide(300);
