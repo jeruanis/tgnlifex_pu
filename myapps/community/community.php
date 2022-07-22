@@ -22,7 +22,8 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
     include("../main/navbar.php");
     $startTime = date("Y-m-d H:i:s");
  ?>
- <div class="">
+ <main class="">
+   <section>
       <form class="post_form indexForm mb-3 p-2" action="upload_imageAndVideo.php" method="POST" enctype="multipart/form-data">
           <textarea name="post_text" id="post_text" placeholder="Type your post here.." class="indTextarea form-control"></textarea>
           <input type="submit" name="post" id="post_button" value="Enter" class="form-control indSubmit btn btn-warning" style="width:118px;float:right;">
@@ -38,8 +39,9 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
               </label>
             </div>
           </div>
-
       </form>
+    </section>
+    <section>
       <center id="spinner" class="d-none">
          <img style="width:50px" src="../../../assets/images/icon/loading.gif"/>
          <div id="pwait" class="d-none"><p>Please wait it takes longer time...</p></div>
@@ -50,8 +52,8 @@ if (isset($_COOKIE[ 'QTSSTYU'])){
       <div class="post_area"></div>
       <center><img id="loading" src="../../../assets/images/icon/loading.gif"></center>
       <div class="d-inline-block" style="margin-left:50%"><a href="#" class="back-to-top"></a></div>
-
-   </div>
+    </section>
+   </main>
 <?php include('../main/footer.php');
  ?>
  <script>

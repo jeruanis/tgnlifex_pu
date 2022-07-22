@@ -29,7 +29,7 @@ if(isset($_GET['q'])) {
     else {
         $usersReturnedQuery = mysqli_query($conn, "SELECT username, first_name, last_name, profile_pic FROM users WHERE (username LIKE '$names[0]%' OR username LIKE '$names[0]%') AND user_closed='no' LIMIT 8");}
 
-          echo "<div class='card'><div class='card-body'>";
+          echo "<section class='card'><div class='card-body'>";
           echo "<div class='liveSearchWrap'>";
             if($query != " ") {
                 while($row = mysqli_fetch_array($usersReturnedQuery)) {
@@ -43,21 +43,21 @@ if(isset($_GET['q'])) {
                     }else{
                         $mutual_friends = "";
                        }
-                          if($user_name != $userloggedin) {
-                                 echo "<div class='resultDisplayLiveSearch'>
-                                       <a href='../profile/".$user_name."?".$url_name."=". urlencode($gname)."' style='color: #1485bd' >
-                                            <div class='liveSearchText'><img src='../../../".$profile_pic."' style='width:51px;margin-right:9px;' > ". $user_name ."<br>
-                                                ".$mutual_friends."
-                                            </div>
-                                        </a>
-                                      <div><br>";
+            if($user_name == 'support-service'){
+              echo " ";
+            }elseif($user_name != $userloggedin) {
+                   echo "<div class='resultDisplayLiveSearch'>
+                         <a href='../profile/".$user_name."?".$url_name."=". urlencode($gname)."' style='color: #1485bd' >
+                              <div class='liveSearchText'><img src='../../../".$profile_pic."' style='width:51px;margin-right:9px;' > ". $user_name ."<br>
+                                  ".$mutual_friends."
+                              </div>
+                          </a>
+                        <div><br>";
 
-                                   }
-                                }
-                            }
-
-            else {
+                     }
+                  }
+              }else {
                 echo " ";
             }
         echo "</div>";
-        echo '</div></div>';
+        echo '</div></section>';

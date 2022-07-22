@@ -15,8 +15,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z"/></svg>
     </button>
   </section>
-		<section class="collapse navbar-collapse" id="navbarNav">
-
+		<section class="navbar-collapse" id="navbarNav">
        <ul class="navbar-nav">
        <?php if ($curPageName != 'index.php' ) {  ?>
 				<li class="nav-item">
@@ -131,7 +130,7 @@
            <?php
              if($curPageName == 'profile.php') { ?>
                <li>
-                 <form action="../utilities/search" method="GET" name="search_form" class="form-inline my-2 my-lg-0 form-control" >
+                 <form action="../utilities/search" method="GET" name="search_form" class="form-inline my-2 my-lg-0 form-control" autocomplete="off">
                     <span class="se-ico"></span>
                     <input class="no-outline border-0 mr-sm-2" type="text" onkeyup="getLiveSearchUsers(this.value,'<?php echo $userloggedin; ?>')" name="q" placeholder="Search username" id="search_text_input">
                     <input type="hidden">

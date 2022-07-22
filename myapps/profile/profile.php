@@ -20,7 +20,7 @@
 
 </style>
 </head>
-
+<main>
  <section class="mb-3 py-3 bg-white" style="border-bottom:12px solid #f2f2f2">
     <div class="px-3">
       <div class="row">
@@ -28,7 +28,7 @@
       <?php
         include('profile_sidebar.php'); ?>
 
-       <main class="col-md-9">
+       <section class="col-md-9">
          <article class="">
            <div class="">
              <div class="row gutters-sm">
@@ -257,7 +257,7 @@
                  ?>
                </div>
             </article> <!-- order-group.// -->
-          </main>
+          </section>
       </div> <!-- row.// -->
      </div>
  </section>
@@ -272,6 +272,7 @@
        <div class="d-inline-block" style="margin-left:-23px;position:relative;left:50%;"><a href="#" class="back-to-top"></a></div>
     <?php } ?>
   </section>
+</main>
  <?php } ?>
   <?php
      include('../main/footer.php');
